@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* BASE STYLES */
+body {
+    background-color: aliceblue;
+    font-family: 'Lato', monospace;
+    /* Change height below */
+    min-height: 5000px;
+}
+
+/* NORMAL STYLES */
+.header {
+    background: rgb(46, 46, 46);
+    /*place to put the position:fixed and width=100 to keep it at the top*/
+    /*put padding-top the same length as the min height in header_content in body*/
+    /*then put the top: 0 for the element to stick to top*/
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    font-size: 16px;
+}
+
+.title {
+    color: aqua;
+    font-size: 30px;
+}
+
+/* .nav {
+
+} */
+
+.nav__list {
+    display: flex;
+    column-gap: 25px;
+}
+
+/* .nav__item {
+
+} */
+
+.nav__link {
+    color: rgb(255, 255, 255, 0.68);
+    transition: all 0.3s;
+    /*set position relative in response to position:absolute in the after pseudoclass*/
+    position: relative;
+}
+.nav__link:hover,
+.nav__link:focus {
+    color: rgb(255, 255, 255)
+}
+.nav__link::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: greenyellow;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.32s ease-in-out;
+    opacity: 0;
+    /*pointer events prevents selection on the underline*/
+    pointer-events: none;
+}
+.nav__link:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+.dropdown__link {
+    color: rgb(255, 255, 255, 0.68);
+    transition: all 0.3s;
+    /*set position relative in response to position:absolute in the after pseudoclass*/
+    position: relative;
+}
+.dropdown__link:hover,
+.dropdown__link:focus {
+    color: rgb(255, 255, 255)
+}
+.dropdown__link::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: greenyellow;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.32s ease-in-out;
+    opacity: 0;
+    /*pointer events prevents selection on the underline*/
+    pointer-events: none;
+}
+.dropdown__link:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+/* .dropdown:active .dropdown__list{
+    display: block;
+} */
+
+.dropdown__list {
+    background: rgb(46, 46, 46);
+    position: absolute;
+    left: 0;
+    top: 125%;
+    min-width: max-content;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.4);
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    /* display: none; */
+    transition: all 200ms ease-in-out;
+    transform: translateY(-10px);
+}
+.dropdown:hover .dropdown__list {
+    opacity: 1;
+    pointer-events: auto;
+    /* display: block; */
+    
+    transform: translateY(0);
+}
+
+.dropdown__item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.dropdown__item:hover {
+    background-color: rgb(145, 209, 110);
+    transition: all 0.4s;
+}
+
+.dropdown__sublink {
+    color: rgb(255, 255, 255, 0.68);
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 560px) {
+    .header__content {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        row-gap: 15px;
+    }
+}
+
