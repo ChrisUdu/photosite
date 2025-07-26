@@ -174,10 +174,69 @@ body {
 /* .dropdown__sublink {
 } */
 
+
+
+/* failedcontainer */
+/* .grid-containerFAILEDPROJECT {
+    background-color: bisque;
+    display: grid;
+    max-width: 960px;
+    margin: 150px auto;
+    grid-auto-columns: auto;
+    grid-auto-rows: 213px;
+    gap: 1em;
+    grid-template-areas: 
+    "photo-1 photo-1 photo-2 photo-2 photo-3"
+    "photo-1 photo-1 photo-4 photo-5 photo-5"
+    "photo-6 photo-7 photo-7 photo-8 photo-8"
+    "photo-9 photo-7 photo-7 photo-10 photo-11"
+    "photo-12 photo-12 photo-13 photo-13 photo-13"
+    "photo-14 photo-14 photo-13 photo-13 photo-13"
+    "photo-15 photo-16 photo-13 photo-13 photo-13";
+} */
+/* class name intentionally wrong to point out grid specs */
+.grid-container {
+    /* adding for visibility */
+    background-color: bisque;
+    display: grid;
+    max-width: 1080px;
+    margin: 150px auto;
+    /* grid-template-columns: 333px 333px 333px; */
+    /* grid-template-columns: 250px 250px 250px 250px; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, 250px);
+    gap: 1em;
+    grid-template-areas: 
+    "photo-1 photo-1 photo-2 photo-2 photo-3"
+    "photo-1 photo-1 photo-4 photo-5 photo-5"
+    "photo-6 photo-7 photo-8 photo-8 photo-8"
+    "photo-9 photo-10 photo-10 photo-10 photo-11"
+    "photo-9 photo-12 photo-13 photo-13 photo-13"
+    "photo-14 photo-14 photo-13 photo-13 photo-13"
+    "photo-15 photo-16 photo-13 photo-13 photo-13";
+}
+
+.photo {
+    background-color: rgb(190, 148, 230);
+    text-align: center;
+    /* padding: 20px; */
+    border: 2px solid purple;
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+
+
+
 .footer {
     /*change how position is shown here*/
     position: initial;
-    margin-top: 1500px;
+    margin-top: 200px;
     /* uncomment and comment out the footer position here */
     /* bottom: 0; */
     background-color: rgb(20, 20, 20);
@@ -225,6 +284,63 @@ body {
 
 
 /* MEDIA QUERIES */
+
+@media (max-width: 1080px) {
+    .grid-container {
+        /* adding for visibility */
+        max-width: 800px;
+        margin: 150px auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(8, 230px);
+        grid-template-areas: 
+        "photo-2 photo-2 photo-1 photo-1"
+        "photo-3 photo-4 photo-1 photo-1"
+        "photo-8 photo-8 photo-8 photo-6"
+        "photo-9 photo-7 photo-5 photo-5"
+        "photo-9 photo-10 photo-10 photo-10"
+        "photo-9 photo-11 photo-13 photo-13"
+        "photo-15 photo-16 photo-13 photo-13"
+        "photo-12 photo-12 photo-14 photo-14";
+    }
+
+    .footer {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        /* adding for visibility */
+        max-width: 540px;
+        margin: 100px auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(9, 214px);
+        grid-template-areas: 
+        "photo-2 photo-2 photo-3"
+        "photo-4 photo-1 photo-1"
+        "photo-6 photo-1 photo-1"
+        "photo-8 photo-8 photo-8"
+        "photo-5 photo-5 photo-7"
+        "photo-9 photo-12 photo-12"
+        "photo-9 photo-11 photo-15"
+        "photo-10 photo-10 photo-13"
+        "photo-16 photo-14 photo-14";
+    }
+
+    .footer {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 450px) {
+    .grid-container {
+        /* adding for visibility */
+        max-width: 95%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(9, 145px);
+    }
+}
+
 @media (max-width: 560px) {
     .header__content {
         flex-direction: column;
@@ -248,4 +364,6 @@ body {
         text-align: center;
     }
 }
+
+
 
