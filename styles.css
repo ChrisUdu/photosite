@@ -232,6 +232,30 @@ body {
     "photo-7 photo-7 photo-19 photo-19 photo-19"
     ;
 }
+/* orientation for the portraits page */
+.grid-container_portraits {
+    /* adding for visibility */
+    background-color: bisque;
+    display: grid;
+    max-width: 1080px;
+    margin: 70px auto;
+    /* grid-template-columns: 333px 333px 333px; */
+    /* grid-template-columns: 250px 250px 250px 250px; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(10, 250px);
+    gap: 1em;
+    grid-template-areas: 
+    "photo-4 photo-4 photo-4 photo-4 photo-4"
+    "photo-4 photo-4 photo-4 photo-4 photo-4"
+    "photo-2 photo-3 photo-1 photo-6 photo-6"
+    "photo-2 photo-3 photo-5 photo-6 photo-6"
+    "photo-12 photo-12 photo-8 photo-8 photo-7"
+    "photo-12 photo-12 photo-11 photo-10 photo-10"
+    "photo-14 photo-13 photo-11 photo-10 photo-10"
+    "photo-9 photo-9 photo-11 photo-10 photo-10"
+    "photo-9 photo-9 photo-11 photo-16 photo-16"
+    "photo-15 photo-15 photo-15 photo-16 photo-16";
+}
 
 .photo {
     background-color: rgb(190, 148, 230);
@@ -317,7 +341,8 @@ body {
         "photo-9 photo-10 photo-10 photo-10"
         "photo-9 photo-11 photo-13 photo-13"
         "photo-15 photo-16 photo-13 photo-13"
-        "photo-12 photo-12 photo-14 photo-14";
+        "photo-12 photo-12 photo-14 photo-14"
+        ;
     }
     .grid-container_events {
         /* adding for visibility */
@@ -337,6 +362,25 @@ body {
         "photo-20 photo-20 photo-18 photo-18"
         "photo-17 photo-17 photo-10 photo-4"
         "photo-17 photo-17 photo-21 photo-21"
+        ;
+    }
+    .grid-container_portraits {
+        /* adding for visibility */
+        max-width: 800px;
+        margin: 70px auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(10, 230px);
+        grid-template-areas: 
+        "photo-4 photo-4 photo-4 photo-4"
+        "photo-4 photo-4 photo-4 photo-4"
+        "photo-3 photo-3 photo-1 photo-2"
+        "photo-3 photo-3 photo-8 photo-6"
+        "photo-9 photo-7 photo-5 photo-6"
+        "photo-9 photo-10 photo-10 photo-16"
+        "photo-12 photo-10 photo-10 photo-16"
+        "photo-12 photo-11 photo-14 photo-14"
+        "photo-15 photo-15 photo-14 photo-14"
+        "photo-15 photo-15 photo-13 photo-13"
         ;
     }
 
@@ -361,7 +405,8 @@ body {
         "photo-9 photo-12 photo-12"
         "photo-9 photo-11 photo-15"
         "photo-10 photo-10 photo-13"
-        "photo-16 photo-14 photo-14";
+        "photo-16 photo-14 photo-14"
+        ;
     }
     .grid-container_events {
         /* adding for visibility */
@@ -384,6 +429,27 @@ body {
         "photo-20 photo-21 photo-21"
         ;
     }
+    .grid-container_portraits {
+        /* adding for visibility */
+        max-width: 540px;
+        margin: 70px auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(15, 214px);
+        grid-template-areas: 
+        "photo-4 photo-4 photo-4"
+        "photo-4 photo-4 photo-4"
+        "photo-3 photo-1 photo-2"
+        "photo-3 photo-6 photo-2"
+        "photo-8 photo-6 photo-7"
+        "photo-8 photo-5 photo-12"
+        "photo-9 photo-9 photo-12"
+        "photo-9 photo-9 photo-15"
+        "photo-10 photo-11 photo-15"
+        "photo-10 photo-11 photo-13"
+        "photo-16 photo-11 photo-14"
+        "photo-16 photo-11 photo-14"
+        ;
+    }
 
     .footer {
         margin-top: 100px;
@@ -398,7 +464,7 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(9, 145px);
     }
-    .grid-container_events {
+    .grid-container_events, .grid-container_portraits{
         /* adding for visibility */
         max-width: 95%;
         grid-template-columns: 1fr 1fr 1fr;
