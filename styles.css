@@ -29,7 +29,7 @@ body {
     background-color: aliceblue;
     font-family: 'Lato', monospace;
     /* Change height below */
-    min-height: 1500px;
+    min-height: 1200px;
 }
 
 
@@ -280,6 +280,22 @@ body {
     "photo-12 photo-12 photo-11 photo-11 photo-9"
     ;
 }
+/* orientation for the about page */
+.grid-container_about {
+    /* adding for visibility */
+    background-color: bisque;
+    display: grid;
+    max-width: 1080px;
+    margin: 70px auto;
+    /* grid-template-columns: 333px 333px 333px; */
+    /* grid-template-columns: 250px 250px 250px 250px; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 700px;
+    gap: 1em;
+    grid-template-areas: 
+    "item-1 item-2"
+    ;
+}
 
 .photo {
     background-color: rgb(190, 148, 230);
@@ -293,6 +309,41 @@ body {
     object-fit: cover;
     overflow: hidden;
 }
+.about {
+    background-color: rgb(190, 148, 230);
+    text-align: center;
+    align-content: center;
+    max-height: max-content;
+    word-wrap: normal;
+    padding: 35px;
+    border: 2px solid purple;
+    /* change font later */
+    font-family: sans-serif;
+}
+.about h1 {
+    font-size: normal;
+}
+.about p {
+    font-size: larger;
+}
+.profile {
+    border: 5px solid blue;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.profile > .photo {
+    /* background-color: rgb(0, 0, 0); */
+    border: 10px solid purple;
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*width and height get shifted back half*/
+}
+
+
 
 
 
@@ -424,7 +475,6 @@ body {
         "photo-12 photo-12 photo-4 photo-4"
         ;
     }
-
     .footer {
         margin-top: 150px;
     }
@@ -509,6 +559,16 @@ body {
         "photo-10 photo-10 photo-10"
         ;
     }
+    .grid-container_about {
+        max-width: 540px;
+        margin: 70px auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 700px);
+        grid-template-areas: 
+        "item-2"
+        "item-1"
+        ;
+    }
 
     .footer {
         margin-top: 100px;
@@ -534,6 +594,16 @@ body {
         max-width: 95%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(9, 145px);
+    }
+    .grid-container_about {
+        max-width: 95%;
+        grid-template-rows: repeat(2, 600px);
+    }
+    .about h1 {
+    font-size: 24px;
+    }
+    .about p {
+        font-size: 16px;
     }
 }
 
