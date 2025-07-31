@@ -51,6 +51,7 @@ function showNext() {
     modalImg.src = imageSources[currentIndex];
     modalImg.style.opacity = 1;
     },
+    //play around with ms below for optimal smooth transition
     350);
 }
 
@@ -73,3 +74,33 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') showNext();
     if (e.key === 'ArrowLeft') showPrev();
 });
+
+
+
+//See if the touch swipe js below works on mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+
+modalImg.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+
+modalImg.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipeGesture();
+});
+
+function handleSwipeGesture() {
+  const swipeDistance = touchEndX - touchStartX;
+
+  const threshold = 50;
+
+  if (swipeDistance > threshold) {
+    showPrev();
+  } else if (swipeDistance < -threshold) {
+    showNext();
+  }
+}
+
