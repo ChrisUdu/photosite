@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/307edc62c1.js" crossorigin="anonymous"></script>
+
+    <!-- <h1>CUPhotos</h1> -->
+    <title>Christian Udu Photography</title>
+
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__content">
+            <a href="#" class="title"><b>Christian Udu<br>Photography</b></a> <!-- will be home page basically -->
+            <!-- This is where I would put another "a" for logo-->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item dropdown" data-dropdown>
+                        <a href="#" id="test" class="dropdown__link" data-dropdown-button>Portfolio &#x25BE;</a>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__sublink">Events</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__sublink">Portraits</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__sublink">Personal</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">About Me</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <!-- <h2 class="page_name"> Contact </h2> -->
+    <div class="maincontent">
+        <div class="maincontent grid-container_contact">
+            <div class="contact_form" style="grid-area: item-1">
+                <p class="form__paragraph">
+                    Need a headshot? Coverage for an event?<br> 
+                    Capture a personal moment?<br>
+                    Please sent me a message here &dArr;
+                </p>
+                <form action="https://formsubmit.co/3ff71cf6396d8eb8a770ac205a12a4fe" method="POST">
+                    <div class="contact">
+                        <label for="name">Name</label>
+                        <input name="name" type="text" id="name" placeholder="Jane Doe" required/>
+                    </div>
+                    <div class="contact">
+                        <label for="email">Email</label>
+                        <input name="email" type="text" id="email" placeholder="example@gmail.com" required />
+                    </div>
+                    <div class="contact">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="8" placeholder="Questions and Comments" required ></textarea>
+                    </div>
+                    <button class="button" type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact_photo" style="grid-area: item-2">
+                <div class="photo">
+                    <img src="Photos/grenen.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__item socialicons">
+                <a href="#" class="socialicons__link"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="socialicons__link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="socialicons__link"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <!-- <p>something to end and acknowledgments</p> -->
+            <div class="footer__item acknowledgements">
+                <p class="acknowledgements__writing">
+                    Copyright &copy; 2025. All Rights Reserved <br> 
+                    Designed by <span class="designer">Christian Udu</span>
+                </p>
+            </div>
+        </div>   
+    </footer>
+
+</body>
+</html>
