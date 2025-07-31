@@ -26,7 +26,7 @@ ul {
 
 /* BASE STYLES */
 body {
-    background-color: aliceblue;
+    background: rgb(12, 12, 12);
     font-family: 'Lato', monospace;
     /* Change height below */
     min-height: 1200px;
@@ -38,7 +38,7 @@ body {
 
 /* NORMAL STYLES */
 .header {
-    background: rgb(0, 0, 0);
+    background: rgb(8, 8, 8);
     /* color below is what I want for the background or close */
     /* background: rgb(46, 46, 46); */
     /*place to put the position:fixed and width=100 to keep it at the top*/
@@ -139,7 +139,7 @@ body {
 } */
 
 .dropdown__list {
-    background: rgb(1, 1, 1);
+    background: rgb(9, 9, 9);
     position: absolute;
     left: 0;
     top: 125%;
@@ -179,7 +179,7 @@ body {
 
 
 .page_name {
-    color: rgb(0, 131, 33);
+    color: rgb(165, 208, 79);
     font-size: 22px;
     padding: 40px 30px 0px;
     text-align: center;
@@ -284,6 +284,7 @@ body {
 .grid-container_about {
     /* adding for visibility */
     /* background-color: bisque; */
+    color: whitesmoke;
     display: grid;
     max-width: 1080px;
     margin: 70px auto;
@@ -363,11 +364,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /*width and height get shifted back half*/
-    opacity: 0.75;
+    opacity: 0.6;
     transition: opacity 0.8s;
 }
 .profile > .photo:hover {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .contact_photo {
@@ -402,6 +403,7 @@ body {
     position: relative;
     font-size: 18px;
     padding: 6px;
+    color: whitesmoke;
     /* modify percentage here */
     /* align-content: end;
     transform: translate(0,-25%); */
@@ -429,7 +431,7 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 3px;
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(102, 102, 102);
     margin-bottom: 20px;
     resize: none;
     transition: background-color 0.4s;
@@ -448,7 +450,7 @@ form .button {
     border-radius: 8px;
     /* use below for color transition for the button */
     background-color: rgb(240, 255, 240);
-    color: black;
+    color: rgb(22, 22, 22);
     cursor: pointer;
     transition: all 0.4s;
 }
@@ -472,7 +474,7 @@ form .button:active {
     margin-top: 200px;
     /* uncomment and comment out the footer position here */
     /* bottom: 0; */
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(8, 8, 8);
     width: 100%;
     padding: 35px 10px 35px;
 }
