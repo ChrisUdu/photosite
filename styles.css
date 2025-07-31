@@ -38,7 +38,9 @@ body {
 
 /* NORMAL STYLES */
 .header {
-    background: rgb(46, 46, 46);
+    background: rgb(0, 0, 0);
+    /* color below is what I want for the background or close */
+    /* background: rgb(46, 46, 46); */
     /*place to put the position:fixed and width=100 to keep it at the top*/
     /*put padding-top the same length as the min height in header_content in body*/
     /*then put the top: 0 for the element to stick to top*/
@@ -52,28 +54,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .title {
-    color: aqua;
+    color: whitesmoke;
     font-size: 24px;
-    padding: 12px 30px;
+    padding: 12px 0px;
     text-align: center;
+    transition: color 0.5s;
+}
+.title:hover {
+    color: greenyellow
 }
 
-/* .nav {
-
-} */
 
 .nav__list {
     display: flex;
     column-gap: 25px;
 }
 
-/* .nav__item {
-
-} */
 
 .nav__link {
     color: rgb(255, 255, 255, 0.68);
@@ -139,13 +139,13 @@ body {
 } */
 
 .dropdown__list {
-    background: rgb(46, 46, 46);
+    background: rgb(1, 1, 1);
     position: absolute;
     left: 0;
     top: 125%;
     min-width: max-content;
     box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.4);
-    font-size: 14px;
+    font-size: 17px;
     opacity: 0;
     pointer-events: none;
     /* display: none; */
@@ -169,7 +169,7 @@ body {
 }
 .dropdown__item:hover {
     background-color: rgb(145, 209, 110);
-    color: black;
+    color: rgb(0, 0, 0);
     transition: all 0.4s;
 }
 
@@ -179,7 +179,7 @@ body {
 
 
 .page_name {
-    color: rgb(0, 100, 100);
+    color: rgb(0, 131, 33);
     font-size: 22px;
     padding: 40px 30px 0px;
     text-align: center;
@@ -190,7 +190,7 @@ body {
 
 .grid-container {
     /* adding for visibility */
-    background-color: bisque;
+    /* background-color: bisque; */
     display: grid;
     max-width: 1080px;
     margin: 150px auto;
@@ -212,7 +212,7 @@ body {
 /* orientation for the events page */
 .grid-container_events {
     /* adding for visibility */
-    background-color: bisque;
+    /* background-color: bisque; */
     display: grid;
     max-width: 1080px;
     margin: 70px auto;
@@ -236,7 +236,7 @@ body {
 /* orientation for the portraits page */
 .grid-container_portraits {
     /* adding for visibility */
-    background-color: bisque;
+    /* background-color: bisque; */
     display: grid;
     max-width: 1080px;
     margin: 70px auto;
@@ -261,7 +261,7 @@ body {
 /* orientation for the personal page */
 .grid-container_personal {
     /* adding for visibility */
-    background-color: bisque;
+    /* background-color: bisque; */
     display: grid;
     max-width: 1080px;
     margin: 70px auto;
@@ -283,7 +283,7 @@ body {
 /* orientation for the about page */
 .grid-container_about {
     /* adding for visibility */
-    background-color: bisque;
+    /* background-color: bisque; */
     display: grid;
     max-width: 1080px;
     margin: 70px auto;
@@ -299,7 +299,7 @@ body {
 /* orientation for the contact page */
 .grid-container_contact {
     /* adding for visibility */
-    background-color: bisque;
+    /* background-color: bisque; */
     display: grid;
     max-width: 1080px;
     margin: 150px auto;
@@ -314,10 +314,13 @@ body {
 }
 
 .photo {
-    background-color: rgb(190, 148, 230);
     text-align: center;
+
+
+    /* put these in to test for visibility */
+    /* background-color: rgb(190, 148, 230); */
     /* padding: 20px; */
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
 }
 .photo img {
     width: 100%;
@@ -326,13 +329,13 @@ body {
     overflow: hidden;
 }
 .about {
-    background-color: rgb(190, 148, 230);
+    /* background-color: rgb(190, 148, 230); */
     text-align: center;
     align-content: center;
     max-height: max-content;
     word-wrap: normal;
     padding: 35px;
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     /* change font later */
     font-family: sans-serif;
 }
@@ -343,30 +346,36 @@ body {
     font-size: larger;
 }
 .profile {
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
     height: 100%;
     width: 100%;
     position: relative;
 }
 .profile > .photo {
     /* background-color: rgb(0, 0, 0); */
-    border: 10px solid purple;
+    /* border: 10px solid purple; */
     height: 80%;
     width: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /*width and height get shifted back half*/
+    opacity: 0.75;
+    transition: opacity 0.8s;
 }
+.profile > .photo:hover {
+    opacity: 1;
+}
+
 .contact_photo {
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
     height: 100%;
     width: 100%;
     position: relative;
 }
 .contact_photo > .photo {
     /* background-color: rgb(0, 0, 0); */
-    border: 10px solid purple;
+    /* border: 10px solid purple; */
     height: 80%;
     width: 80%;
     position: absolute;
@@ -630,7 +639,7 @@ form .button:active {
         max-width: 540px;
         margin: 70px auto;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(15, 214px);
+        grid-template-rows: repeat(12, 214px);
         grid-template-areas: 
         "photo-4 photo-4 photo-4"
         "photo-4 photo-4 photo-4"
