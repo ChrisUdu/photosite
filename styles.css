@@ -315,6 +315,7 @@ body {
 }
 
 .photo {
+    display: block;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -334,6 +335,7 @@ body {
 }
 .about {
     /* background-color: rgb(190, 148, 230); */
+    display: block;
     text-align: center;
     align-content: center;
     max-height: max-content;
