@@ -796,12 +796,12 @@ form .button:active {
     .grid-container_about {
         max-width: 95%;
         grid-template-rows: repeat(2, 600px);
-        gap: 30px;
+        gap: 40px;
     }
     .grid-container_contact {
         max-width: 95%;
         grid-template-rows: repeat(2, 500px);
-        gap: 30px;
+        gap: 100px;
     }
     .about h1 {
     font-size: 24px;
