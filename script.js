@@ -1,13 +1,3 @@
-
-
-// Event Listener for the Page Loading. Waits until Doc is fully loaded
-window.addEventListener('load', () => {
-  document.querySelectorAll('.fade-in').forEach(el => {
-    el.classList.add('loaded');
-  })
-});
-
-
 // Event Listener for the Active Dropdown we are creating
 document.addEventListener('click', e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]")

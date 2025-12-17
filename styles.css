@@ -33,6 +33,18 @@ body {
 }
 
 
+/* KEYFRAMES */
+@keyframes transitionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(14);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
@@ -187,13 +199,6 @@ body {
 }
 
 
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
-.fade-in.loaded {
-    opacity: 1;
-}
 
 .grid-container {
     /* adding for visibility */
@@ -215,6 +220,7 @@ body {
     "photo-14 photo-14 photo-13 photo-13 photo-13"
     "photo-15 photo-16 photo-13 photo-13 photo-13"
     ;
+    animation: transitionFadeIn 0.9s;
 }
 /* orientation for the events page */
 .grid-container_events {
@@ -239,6 +245,7 @@ body {
     "photo-10 photo-18 photo-18 photo-4 photo-20"
     "photo-7 photo-7 photo-19 photo-19 photo-19"
     ;
+    animation: transitionFadeIn 0.9s;
 }
 /* orientation for the portraits page */
 .grid-container_portraits {
@@ -264,6 +271,7 @@ body {
     "photo-9 photo-9 photo-11 photo-16 photo-16"
     "photo-15 photo-15 photo-15 photo-16 photo-16"
     ;
+    animation: transitionFadeIn 0.9s;
 }
 /* orientation for the personal page */
 .grid-container_personal {
@@ -286,6 +294,7 @@ body {
     "photo-10 photo-10 photo-11 photo-11 photo-9"
     "photo-12 photo-12 photo-11 photo-11 photo-9"
     ;
+    animation: transitionFadeIn 0.9s;
 }
 /* orientation for the about page */
 .grid-container_about {
@@ -303,6 +312,7 @@ body {
     grid-template-areas: 
     "item-1 item-2"
     ;
+    animation: transitionFadeIn 0.9s;
 }
 /* orientation for the contact page */
 .grid-container_contact {
@@ -319,6 +329,7 @@ body {
     grid-template-areas: 
     "item-1 item-2"
     ;
+    animation: transitionFadeIn 0.9s;
 }
 
 .photo {
@@ -541,9 +552,15 @@ form .button:active {
     justify-content: center;
     z-index: 2000;
     flex-direction: column;
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 #carousel-modal.hidden {
-    display: none;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
 }
 #carousel-image {
     max-width: 90%;
